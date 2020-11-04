@@ -9,6 +9,8 @@ app.use(BodyParser.urlencoded({ extended: true }));
 
 app.use(express.json());
 
+mongoose.connect(dbURI, {useNewUrlParser: true});
+
 
 app.post('/addHabit', function (request, response) {
 
